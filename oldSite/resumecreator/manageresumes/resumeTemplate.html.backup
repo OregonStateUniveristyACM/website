@@ -1,0 +1,47 @@
+  <hr />
+  <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+   <tr>
+    <td align='left' width='33%' valign=top >
+     <strong>Current Address:</strong><br />
+     <font size="-2">
+	  CURRENTADDRESS<br />
+	  CURRENTPHONE
+     </font>
+    </td>
+    <td valign='top' width='33%' align="center">
+     <font size="+4">FIRSTNAME LASTNAME</font><br />
+	  EMAIL
+    </td>
+    <td nowrap='true' width='33%' align="right" valign=top>
+     <strong>Permanent Address:</strong><br />
+     <font size="-2">
+	   PERMINANTADDRESS<br />
+	   PERMINANTPHONE
+     </font>
+    </td>
+   </tr>
+  </table>
+  <hr />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+<h6>Career Objective</h6><br />
+<ul>OBJECTIVE</ul>
+<h6>Expected Graduation Date</h6><br />
+<ul>EXPECTEDGRADUATIONDATE</ul>
+<h6>Major</h6><br />
+<ul>MAJOR</ul>
+<h6>Education</h6><br />
+<ul>SCHOOLS</ul>
+<h6>Publications</h6><br />
+<ul>PUBLICATIONS</ul>
+<h6>Awards</h6><br />
+<ul>AWARDS</ul>
+<h6>Work Experience</h6><br />
+<ul>EMPLOYMENT</ul>
+<h6>Skills</h6><br />
+<ul>STRENGTHS</ul>
+<h6>Volunteer Activities</h6><br />
+<ul>VOLUNTEERACTIVITIES</ul>
