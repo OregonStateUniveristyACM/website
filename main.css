@@ -1,0 +1,52 @@
+/* Variables */
+/*OSU theme colors*/
+/* Componenets of the site */
+.banner {
+  background: #c34500;
+  width: 100vw;
+  height: 100px; }
+  .banner img {
+    max-width: 500px;
+    height: 80%;
+    margin-top: 10px; }
+
+.container {
+  display: flex; }
+  .container .nav {
+    background: #373737;
+    height: calc(100vh - 100px);
+    width: 150px; }
+    .container .nav p {
+      text-indent: 15px;
+      color: #f5f2ed;
+      font-family: "Gudea", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 50px;
+      font-size: 15pt;
+      background: black; }
+    .container .nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      .container .nav ul a {
+        background: none;
+        color: #f5f2ed;
+        text-decoration: none;
+        transition: .5s; }
+        .container .nav ul a:hover {
+          color: #a7c4c9;
+          transition: .5s;
+          background: #385e86; }
+      .container .nav ul li {
+        padding: 10px 0 10px 15px;
+        font-family: "Gudea", sans-serif;
+        font-size: 14pt; }
+  .container .content {
+    width: calc(100vw - 150px); }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=main.css.map */
