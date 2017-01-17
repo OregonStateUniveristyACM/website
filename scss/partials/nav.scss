@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    .nav {
+        background: $grey;
+        height: calc(100vh - 100px);
+        width: 150px;
+        p {
+            text-indent: 15px;
+            color: $white;
+            font-family: $body-font;
+            margin: 0;
+            padding: 0;
+            line-height: 50px;
+            font-size: 15pt;
+            background: black;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            a {
+                background: none;
+                color: $white;
+                text-decoration: none;
+                transition: .5s;
+                &:hover {
+                    color: $light-blue;
+                    transition: .5s;
+                    background: $blue;
+                }
+            }
+            li {
+                padding: 10px 0 10px 15px;
+                font-family: $body-font;
+                font-size: 14pt;
+            }
+        }
+    }
+    .content {
+        width: calc(100vw - 150px);
+    }
+}
