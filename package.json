@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "https://github.com/OregonStateUniveristyACM/website.git",
   "author": "Connor Christensen <chriconn@oregonstate.edu>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "gulpjs/gulp.git#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rm": "^1.0.4",
+    "gulp-sass": "^3.1.0",
+    "vue": "^2.4.2"
+  }
 }

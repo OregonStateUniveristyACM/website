@@ -1,11 +1,11 @@
 /* Variables */
-@import "resources/scss/modules/colors";
-@import "resources/scss/modules/font";
+@import "../../resources/scss/variables/colors";
+@import "../../resources/scss/variables/font";
 
 
 /* Componenets of the site */
-@import "resources/scss/partials/banner";
-@import "resources/scss/partials/nav";
+@import "../../resources/scss/modules/banner";
+@import "../../resources/scss/modules/nav";
 
 body {
     margin: 0;
