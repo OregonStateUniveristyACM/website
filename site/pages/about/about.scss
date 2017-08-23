@@ -1,0 +1,19 @@
+/* Variables */
+@import "../resources/scss/modules/colors";
+@import "../resources/scss/modules/font";
+
+
+/* Componenets of the site */
+@import "../resources/scss/partials/banner";
+@import "../resources/scss/partials/nav";
+
+.imgBanner {
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 50px;
+    img {
+        width: 100%;
+        transform: translateY(-10%);
+    }
+}

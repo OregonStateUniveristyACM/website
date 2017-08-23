@@ -1,0 +1,54 @@
+/* Variables */
+@import "resources/scss/modules/colors";
+@import "resources/scss/modules/font";
+
+
+/* Componenets of the site */
+@import "resources/scss/partials/banner";
+@import "resources/scss/partials/nav";
+
+body {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.whoWeAre {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    h2 {
+        font-family: $body-font;
+        text-align: center;
+    }
+    p {
+        font-family: $body-font;
+        text-align: justify;
+    }
+}
+
+.upcomingEvents {
+    width: 100vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .event {
+        background: $light-blue;
+        width: 500px;
+        margin: 10px;
+        .imgContainer {
+            height: 200px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            font-family: $body-font;
+            padding: 20px;
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+}

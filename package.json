@@ -1,0 +1,9 @@
+{
+  "name": "ACMwebsite",
+  "version": "1.0.0",
+  "description": "website for the Association of Computing Machinery at Oregon State University",
+  "main": "index.js",
+  "repository": "https://github.com/OregonStateUniveristyACM/website.git",
+  "author": "Connor Christensen <chriconn@oregonstate.edu>",
+  "license": "MIT"
+}
