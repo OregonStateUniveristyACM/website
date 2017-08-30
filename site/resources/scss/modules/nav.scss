@@ -2,21 +2,10 @@
 @import "../variables/font";
 @import "../variables/breakpoints";
 
-$navHeight: 50px;
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
 nav {
     grid-area: nav;
-    display: flex;
-    height: $navHeight;
     background: $orange;
-    width: 100vw;
     p, a {
-        line-height: $navHeight;
         color: white;
         font-family: $body-font;
     }
@@ -30,15 +19,33 @@ nav {
         text-decoration: none;
         transition: .5s;
         padding: 0 20px;
-        text-align: center; 
+        text-align: center;
         font-size: 14pt;
         &:hover {
             transition: .5s;
-            background: $blue;       
+            background: $blue;
         }
     }
     #selectedTab {
         background: $grey;
         cursor: default;
+    }
+
+    @include less-than($tablet) {
+        width: 100vw;
+        p { text-align: center; }
+        .links {
+            display: flex;
+        }
+        p, a {
+            padding: 10px 0;
+            width: 100vw;
+        }
+    }
+
+    @include greater-than($tablet) {
+        display: flex;
+        .links { display: flex; }
+        p, a { line-height: 50px; }
     }
 }

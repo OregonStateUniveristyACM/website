@@ -1,19 +1,38 @@
 /* Variables */
 @import "../resources/scss/variables/colors";
 @import "../resources/scss/variables/font";
+@import "../resources/scss/variables/breakpoints";
 
 /* Componenets of the site */
+@import "../resources/scss/modules/reset";
 @import "../resources/scss/modules/banner";
 @import "../resources/scss/modules/nav";
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    display: grid;
+
+    @include less-than($tablet) {
+        grid-template-columns: 150px auto;
+        grid-template-areas:
+            "nav"
+            "events"
+            "about";
+    }
+
+    @include greater-than($tablet) {
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+            "nav nav"
+            "events about";
+    }
 }
 
 .whoWeAre {
-    max-width: 600px;
-    margin: auto;
+    grid-area: about;
     padding: 20px;
     background: grey;
     h2 {
@@ -27,8 +46,7 @@ body {
 }
 
 .upcomingEvents {
-    width: 100vw;
-    justify-content: center;
+    grid-area: events;
     .event {
         background: $light-blue;
         width: 500px;
