@@ -1,8 +1,13 @@
 var gulp = require('gulp');
-var plugin = require("gulp-load-plugins")({
-   pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
-   replaceString: /\bgulp[\-.]/
-});
+var plugin = require("gulp-load-plugins")(
+    {
+        pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
+        replaceString: /\bgulp[\-.]/,
+        rename: {
+            'gulp-inject-file': 'injectFile'
+        }
+    }
+);
 var browserSync = require('browser-sync').create();
 
 var root = "site/";
@@ -11,12 +16,12 @@ var paths = {
     watch: {
         scss: root + "**/*.scss",
         js:   root + "**/*.js",
-        html: root + "**/*.html"   
+        html: root + "**/*.html"
     },
     compile: {
         scss: root + "pages/**/*.scss",
         js:   root + "pages/**/*.js",
-        html: root + "pages/**/*.html"   
+        html: root + "pages/**/*.html"
     }
 };
 
@@ -24,6 +29,7 @@ var paths = {
 gulp.task('scss', function() {
     return gulp.src(paths.compile.scss)
         .pipe(plugin.sass())
+        .pipe(plugin.flatten())
         .pipe(gulp.dest(destination))
         .pipe(browserSync.stream());
 });
@@ -31,6 +37,8 @@ gulp.task('scss', function() {
 // Move our html to the destination folder
 gulp.task('html', function() {
     return gulp.src(paths.compile.html)
+        .pipe(plugin.injectFile())
+        .pipe(plugin.flatten())
         .pipe(gulp.dest(destination))
         .pipe(browserSync.stream());
 });
@@ -38,6 +46,7 @@ gulp.task('html', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src(paths.compile.js)
+        .pipe(plugin.flatten())
         .pipe(gulp.dest(destination))
         .pipe(browserSync.stream());
 });
