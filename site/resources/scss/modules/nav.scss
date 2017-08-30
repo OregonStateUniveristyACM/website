@@ -1,5 +1,6 @@
 @import "../variables/colors";
 @import "../variables/font";
+@import "../variables/breakpoints";
 
 $navHeight: 50px;
 
@@ -9,41 +10,35 @@ body {
 }
 
 nav {
+    grid-area: nav;
     display: flex;
-    position: fixed;
-    top: 0;
-    background: $orange;
     height: $navHeight;
+    background: $orange;
     width: 100vw;
-    p {
-        text-indent: 15px;
-        color: $white;
-        font-family: $body-font;
-        margin: 0;
-        padding: 0;
+    p, a {
         line-height: $navHeight;
+        color: white;
+        font-family: $body-font;
+    }
+    p {
+        margin: 0;
+        padding: 0 15px;
         font-size: 15pt;
         background: black;
-        width: 150px;
     }
     a {
-        color: $white;
         text-decoration: none;
         transition: .5s;
-        padding: 0;
-        width: 110px;
-        text-align: center;
-        font-family: $body-font;
+        padding: 0 20px;
+        text-align: center; 
         font-size: 14pt;
-        line-height: $navHeight;   
-        
+        &:hover {
+            transition: .5s;
+            background: $blue;       
+        }
     }
-    .selected {
+    #selectedTab {
         background: $grey;
         cursor: default;
-    }
-    .unselected:hover {
-        transition: .5s;
-        background: $blue;
     }
 }
