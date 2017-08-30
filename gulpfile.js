@@ -33,7 +33,7 @@ gulp.task('html', function() {
     return gulp.src(paths.compile.html)
         .pipe(gulp.dest(destination))
         .pipe(browserSync.stream());
-})
+});
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
@@ -59,6 +59,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.watch.js, gulp.series('scripts'));
     gulp.watch(paths.watch.scss, gulp.series('scss'));
+    gulp.watch(paths.watch.html, gulp.series('html'));
 });
 
 //remove .DS_Store files
@@ -78,4 +79,4 @@ gulp.task('build', gulp.parallel('scss', 'scripts', 'html'));
 gulp.task('clean', gulp.parallel('clean:ds', 'clean:dest'));
 gulp.task('rebuild', gulp.series('clean', 'build'));
 
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('default', gulp.series('build', 'serve'));
