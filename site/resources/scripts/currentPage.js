@@ -32,7 +32,7 @@ function getURL() {
     url.host = splitURL[1];
     //if the url is long enough to have a page, then get that and remove the html
     if (splitURL.length > 2) {
-        url.page = splitURL[2];
+        url.page = splitURL[splitURL.length-1];
     }
 
     return url;
