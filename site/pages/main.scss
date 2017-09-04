@@ -2,10 +2,10 @@
 @import "../resources/scss/variables/colors";
 @import "../resources/scss/variables/font";
 @import "../resources/scss/variables/breakpoints";
+@import "../resources/scss/variables/banner";
 
 /* Componenets of the site */
 @import "../resources/scss/modules/reset";
-@import "../resources/scss/modules/banner";
 @import "../resources/scss/modules/nav";
 
 html, body {
