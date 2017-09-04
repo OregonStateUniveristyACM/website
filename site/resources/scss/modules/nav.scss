@@ -5,15 +5,17 @@
 nav {
     grid-area: nav;
     background: $orange;
+    width: 100vw;
     p, a {
         color: white;
         font-family: $body-font;
+        line-height: 50px;
     }
     p {
         margin: 0;
         padding: 0 15px;
         font-size: 15pt;
-        background: black;
+        background: $black;
     }
     a {
         text-decoration: none;
@@ -26,26 +28,21 @@ nav {
             background: $blue;
         }
     }
+    .links {
+        display: flex;
+    }
+
     #selectedTab {
+        transition: 0s;
         background: $grey;
         cursor: default;
     }
 
-    @include less-than($tablet) {
-        width: 100vw;
-        p { text-align: center; }
-        .links {
-            display: flex;
-        }
-        p, a {
-            padding: 10px 0;
-            width: 100vw;
-        }
-    }
-
-    @include greater-than($tablet) {
+    @include greater-than($phone) {
         display: flex;
-        .links { display: flex; }
-        p, a { line-height: 50px; }
+    }
+    @include less-than($phone) {
+        p { text-align: center; }
+        .links { justify-content: center; }
     }
 }

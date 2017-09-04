@@ -20,8 +20,12 @@ var paths = {
     },
     compile: {
         scss: root + "pages/**/*.scss",
-        js:   root + "pages/**/*.js",
-        html: root + "pages/**/*.html"
+        js:   root + "**/*.js",
+        html: root + "pages/**/*.html",
+        images: root + "resources/images/**/*"
+    },
+    end: {
+        images: destination + "images/"
     }
 };
 
@@ -48,6 +52,13 @@ gulp.task('scripts', function() {
     return gulp.src(paths.compile.js)
         .pipe(plugin.flatten())
         .pipe(gulp.dest(destination))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('images', function() {
+    return gulp.src(paths.compile.images)
+        .pipe(plugin.flatten())
+        .pipe(gulp.dest(paths.end.images))
         .pipe(browserSync.stream());
 });
 
@@ -84,7 +95,7 @@ gulp.task('clean:dest', function() {
 });
 
 // Default Task
-gulp.task('build', gulp.parallel('scss', 'scripts', 'html'));
+gulp.task('build', gulp.parallel('scss', 'scripts', 'html', 'images'));
 gulp.task('clean', gulp.parallel('clean:ds', 'clean:dest'));
 gulp.task('rebuild', gulp.series('clean', 'build'));
 
