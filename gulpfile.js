@@ -51,6 +51,13 @@ gulp.task('scripts', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('images', function() {
+    return gulp.src(paths.compile.images)
+        .pipe(plugin.flatten())
+        .pipe(gulp.dest(paths.end.images))
+        .pipe(browserSync.stream());
+});
+
 // serve up the page on a browser
 gulp.task('serve', function() {
     browserSync.init({
@@ -84,7 +91,7 @@ gulp.task('clean:dest', function() {
 });
 
 // Default Task
-gulp.task('build', gulp.parallel('scss', 'scripts', 'html'));
+gulp.task('build', gulp.parallel('scss', 'scripts', 'html', 'images'));
 gulp.task('clean', gulp.parallel('clean:ds', 'clean:dest'));
 gulp.task('rebuild', gulp.series('clean', 'build'));
 
