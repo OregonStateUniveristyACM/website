@@ -42,11 +42,24 @@ function markCurrentNavTabSelected() {
     var url = getURL();
     var nav = document.getElementsByTagName("nav")[0];
     var links = nav.getElementsByTagName("a");
+
+    //if the page was never set or doesn't end in .html
+    if (!url.page || !/[A-z0-9]+.html/.test(url.page)) {
+        //set our home page as selected
+        links[0].id = "selectedTab";
+        return true;
+    }
+
+    //loop through each link and if the current page matches the href on the page
+    //then we know that is the tab we are on
     for (var x = 0; x < links.length; x++) {
         if (links[x].getAttribute("href") === url.page) {
             links[x].id = "selectedTab";
+            return true;
         }
     }
+
+    return false;
 }
 
 window.onload = function() {
