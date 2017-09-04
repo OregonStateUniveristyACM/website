@@ -20,8 +20,12 @@ var paths = {
     },
     compile: {
         scss: root + "pages/**/*.scss",
-        js:   root + "pages/**/*.js",
-        html: root + "pages/**/*.html"
+        js:   root + "**/*.js",
+        html: root + "pages/**/*.html",
+        images: root + "resources/images/**/*"
+    },
+    end: {
+        images: destination + "images/"
     }
 };
 
