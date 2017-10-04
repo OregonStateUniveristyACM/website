@@ -20,6 +20,13 @@ html, body {
     }
 }
 
+.notification {
+    background: darken($orange, 15%);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
 .content {
     @include less-than($phone) {
         margin: 0 10px;
