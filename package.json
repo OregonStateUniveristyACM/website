@@ -7,16 +7,15 @@
   "author": "Connor Christensen <chriconn@oregonstate.edu>",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "gulpjs/gulp.git#4.0",
-    "gulp-clean": "^0.3.2",
+    "browser-sync": "^2.26.4",
+    "gulp": "^4.0.1",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-flatten": "^0.3.1",
-    "gulp-inject": "^4.2.0",
-    "gulp-inject-file": "^0.0.18",
+    "gulp-flatten": "^0.4.0",
+    "gulp-inject": "^5.0.2",
+    "gulp-inject-file": "^0.0.19",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-print": "^2.0.1",
-    "gulp-sass": "^3.1.0",
-    "vue": "^2.4.2"
+    "gulp-print": "^5.0.2",
+    "gulp-sass": "^4.0.2"
   }
 }
