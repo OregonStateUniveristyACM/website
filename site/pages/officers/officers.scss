@@ -12,14 +12,6 @@
     width: 95vw;
     margin: auto;
     font-family: $body-font;
-    display: grid;
-    grid-gap: 10px;
-    @include between($laptop, $desktop) {
-        grid-template-columns: 1fr 1fr;
-    }
-    @include between($desktop, $fourK) {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 h1 {
@@ -28,34 +20,18 @@ h1 {
     padding: 20px 0;
 }
 
-.officer {
+table {
+    margin: auto;
     color: white;
-    background: $grey;
-    @include greater-than($phone) {
-        display: flex;
-        align-items: center;
+    th {
+      text-align: left;
+      background: $grey;
     }
-
+    td, th {
+      padding: 10px;
+    }
+    td {
+      background: lighten($grey, 20%);
+    }
     padding: 20px;
-
-    h5 {
-        padding: 5px 0;
-    }
-
-    .imgContainer {
-        text-align: center;
-
-        @include greater-than($phone) {padding-right: 20px;}
-        @include less-than($phone) {padding-bottom: 10px;}
-        img {
-            width: 150px;
-            border-radius: 50%;
-        }
-    }
-    .description {
-        p {
-            text-indent: 20px;
-            line-height: 1.2;
-        }
-    }
 }
